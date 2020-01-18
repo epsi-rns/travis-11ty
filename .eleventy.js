@@ -3,7 +3,7 @@
 
 const config = {
     // URL related
-    pathPrefix: "/",
+    pathPrefix: "/travis-11ty/",
 
     // Templating Engine
     templateFormats: [
