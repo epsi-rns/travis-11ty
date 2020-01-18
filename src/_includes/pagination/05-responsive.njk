@@ -17,7 +17,7 @@
     <!-- First Page. -->    
     {% if current  > 1 %}
       <li class="stop-icon-first waves-effect">
-        <a href="{{ pagination.firstPageLink }}" rel="first"
+        <a href="{{ pagination.firstPageLink | url }}" rel="first"
            class="{{ color }}-text text-darken-2">
           <i class="material-icons">first_page</i>
       </a></li>
@@ -31,7 +31,7 @@
     <!-- Previous Page. -->
     {% if pagination.previousPageLink %}
       <li class="waves-effect">
-        <a href="{{ pagination.previousPageLink }}" rel="prev"
+        <a href="{{ pagination.previousPageLink | url }}" rel="prev"
            class="{{ color }}-text text-darken-2">
           <i class="material-icons">chevron_left</i>
       </a></li>
@@ -46,7 +46,7 @@
       <!-- First Page. -->
       {% if (current - adjacentLinks > 1) %}
       <li class="waves-effect">
-        <a href="{{ pagination.firstPageLink }}"
+        <a href="{{ pagination.firstPageLink | url }}"
            aria-label="Goto page 1">1</a>
       </li>
       {% endif %}
@@ -106,7 +106,7 @@
         {% if cursor != current  %}
 
         <li class="waves-effect {{ pageOffsetClass }}">
-          <a href="{{ link }}"
+          <a href="{{ link | url }}"
              aria-label="Goto page {{ cursor }}"
              class="{{ color }}-text text-darken-2">
             {{ cursor }}
@@ -135,7 +135,7 @@
       <!-- Last Page. -->
       {% if (current + adjacentLinks < totalPages) %}
       <li class="waves-effect">
-        <a href="{{ pagination.lastPageLink }}"
+        <a href="{{ pagination.lastPageLink | url }}"
            aria-label="Goto page {{ totalPages }}"
           >{{ totalPages }}</a>
       </li>
@@ -145,7 +145,7 @@
     <!-- Next Page. -->
     {% if pagination.nextPageLink %}
       <li class="waves-effect">
-        <a href="{{ pagination.nextPageLink }}" rel="next"
+        <a href="{{ pagination.nextPageLink | url }}" rel="next"
            class="{{ color }}-text text-darken-2">
           <i class="material-icons">chevron_right</i>
       </a></li>
@@ -159,7 +159,7 @@
     <!-- Last Page. -->
     {% if current != totalPages %}
       <li class="stop-icon-last waves-effect">
-        <a href="{{ pagination.lastPageLink }}" rel="last"
+        <a href="{{ pagination.lastPageLink | url }}" rel="last"
            class="{{ color }}-text text-darken-2">
           <i class="material-icons">last_page</i>
       </a></li>
