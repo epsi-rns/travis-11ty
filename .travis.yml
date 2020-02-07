@@ -1,14 +1,19 @@
 language: node_js
 node_js:
   - 8
+
 before_script:
   - npm install @11ty/eleventy -g
 script: eleventy --pathprefix="/travis-11ty/"
+
 deploy:
   local-dir: dist
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+
+  # Set in travis-ci.org dashboard, marked secure
+  github-token: $GITHUB_TOKEN
   keep-history: true
   on:
     branch: master
+
