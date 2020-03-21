@@ -4,6 +4,7 @@ node_js:
 
 before_script:
   - npm install @11ty/eleventy -g
+
 script: eleventy --pathprefix="/travis-11ty/"
 
 deploy:
